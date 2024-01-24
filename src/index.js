@@ -3,11 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {createStore} from 'redux';
+import { Provider } from 'react-redux';
+
+let initialStore = {};
+
+let reducer = (latestStore = initialStore, dispatchedObj) => {
+  if(dispatchedObj.type === 'login'){
+    return {...latestStore, userDetails: dispatchedObj.data}
+  }
+};
+
+let store = createStore(reducer);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>
 );
 

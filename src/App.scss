@@ -1,0 +1,231 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body{
+    background-color: rgba(246, 243, 243, 0.844);
+}
+
+.bg-body-tertiary{
+    background-color: white !important;
+}
+
+.logo{
+
+    margin-left: 30px;
+    font-weight: bolder;
+    font-size: x-large;
+
+}
+
+.d-flex{
+
+    position: relative;
+    right: 40%;
+    width: 40%;
+
+}
+
+.icons{
+
+    display: flex;
+    gap:15px;
+    position: relative;
+    right: 5%;
+    font-size: larger;
+    cursor: pointer;
+
+}
+
+.carousel{
+    top: 20px;  
+}
+
+.d-block{
+    height: 350px;
+}
+
+// styles for login form 
+
+.input-container {
+    position: relative;
+    margin-top: 10%;
+  }
+  
+  .input {
+    font-size: 1em;
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    color: #333;
+  }
+  
+  .input:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .input:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input::placeholder {
+    color: #999;
+  }
+  
+  .highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: dodgerblue;
+    transition: width 0.3s ease;
+  }
+  
+  .input:focus + .highlight {
+    width: 100%;
+  }
+  
+  /* Optional: Animation on focus */
+  @keyframes input-focus {
+    from {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+  
+    to {
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .input:focus {
+    animation: input-focus 0.3s ease;
+  }
+
+  //   styles for button
+  
+  .button {
+    position: relative;
+    top: 30px;
+    width: 35%;
+    font-size: larger;
+    font-weight: bolder;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: dodgerblue;
+    transition: all 0.2s ease;
+  }
+  
+  .button:active {
+    transform: scale(0.96);
+  }
+  
+  .button:before,
+  .button:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+  }
+  
+  .button:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, dodgerblue 20%, transparent 30%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, dodgerblue 15%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+  }
+  
+  @keyframes greentopBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+  
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+  .button:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, dodgerblue 15%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%),
+      radial-gradient(circle, dodgerblue 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.9s ease;
+  }
+  
+  @keyframes greenbottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+  
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+
+  // styles for register-link
+
+.link{
+    position: relative;
+    top: 40px;
+    cursor: pointer;
+    color: dodgerblue;
+}
+
+.link:hover{
+  text-decoration: underline;
+}
+
+.button2{
+  border-color: dodgerblue;
+  color: black;
+}
+
+.button2:hover{
+  background-color: dodgerblue;
+  border-color: dodgerblue;
+}
